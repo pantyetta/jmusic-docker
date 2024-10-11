@@ -1,9 +1,7 @@
 services:
   jmusicbot:
     container_name: jmusicbot
-    build: .
+    image: ghcr.io/pantyetta/jmusic-docker-base:latest
     volumes:
       - ./app:/app
-    stdin_open: true
-    tty: true
     command: java -Dnogui=true -jar jmusicbot.jar
